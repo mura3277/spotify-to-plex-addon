@@ -20,6 +20,9 @@ host_network: true
 ports:
   9030/tcp: null
 
+map:
+  - config:rw
+
 options:
   spotify_api_client_id: ""
   spotify_api_client_secret: ""
@@ -46,17 +49,6 @@ environment:
   STORAGE_DIR: /data
   PORT: "9030"
 
-  SPOTIFY_API_CLIENT_ID: spotify_api_client_id
-  SPOTIFY_API_CLIENT_SECRET: spotify_api_client_secret
-
-  SPOTIFY_API_REDIRECT_URI: spotify_api_redirect_uri
-
-  ENCRYPTION_KEY: encryption_key
-
-  PLEX_APP_ID: plex_app_id
-  TIDAL_API_CLIENT_ID: tidal_api_client_id
-  TIDAL_API_CLIENT_SECRET: tidal_api_client_secret
-  LIDARR_API_KEY: lidarr_api_key
-  SLSKD_API_KEY: slskd_api_key
+command: /run.sh
 
 image: jjdenhertog/spotify-to-plex
