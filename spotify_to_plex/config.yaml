@@ -36,4 +36,4 @@ environment:
   STORAGE_DIR: /data
   PORT: "9030"
 
-image: jjdenhertog/spotify-to-plex:latest
+image: jjdenhertog/spotify-to-plex
