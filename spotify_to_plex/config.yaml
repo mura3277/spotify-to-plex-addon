@@ -1,6 +1,6 @@
 name: Spotify to Plex
 slug: spotify_to_plex
-version: "1.0.1"
+version: "1.0.104"
 
 description: Sync Spotify playlists with Plex
 
@@ -36,4 +36,4 @@ environment:
   STORAGE_DIR: /data
   PORT: "9030"
 
-image: jjdenhertog/spotify-to-plex-{arch}
+image: jjdenhertog/spotify-to-plex
