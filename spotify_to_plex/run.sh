@@ -20,6 +20,5 @@ export ENCRYPTION_KEY
 export PLEX_APP_ID
 
 echo "ENV LOADED"
-echo "$SPOTIFY_API_CLIENT_ID"
 
 exec /docker-entrypoint.sh "$@"
