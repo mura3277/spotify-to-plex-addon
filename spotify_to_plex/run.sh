@@ -1,20 +1,25 @@
-#!/usr/bin/with-contenv bashio
+#!/usr/bin/env bash
+set -e
 
-echo "Starting Spotify to Plex add-on..."
+echo "RUN.SH STARTED"
 
-export SPOTIFY_API_CLIENT_ID=$(bashio::config 'spotify_api_client_id')
-export SPOTIFY_API_CLIENT_SECRET=$(bashio::config 'spotify_api_client_secret')
-export SPOTIFY_API_REDIRECT_URI=$(bashio::config 'spotify_api_redirect_uri')
+SPOTIFY_API_CLIENT_ID=$(grep -o '"spotify_api_client_id"[[:space:]]*:[[:space:]]*"[^"]*"' /data/options.json | cut -d '"' -f4)
 
-export ENCRYPTION_KEY=$(bashio::config 'encryption_key')
-export PLEX_APP_ID=$(bashio::config 'plex_app_id')
+SPOTIFY_API_CLIENT_SECRET=$(grep -o '"spotify_api_client_secret"[[:space:]]*:[[:space:]]*"[^"]*"' /data/options.json | cut -d '"' -f4)
 
-export TIDAL_API_CLIENT_ID=$(bashio::config 'tidal_api_client_id')
-export TIDAL_API_CLIENT_SECRET=$(bashio::config 'tidal_api_client_secret')
-export LIDARR_API_KEY=$(bashio::config 'lidarr_api_key')
-export SLSKD_API_KEY=$(bashio::config 'slskd_api_key')
+SPOTIFY_API_REDIRECT_URI=$(grep -o '"spotify_api_redirect_uri"[[:space:]]*:[[:space:]]*"[^"]*"' /data/options.json | cut -d '"' -f4)
 
-echo "Env loaded!"
+ENCRYPTION_KEY=$(grep -o '"encryption_key"[[:space:]]*:[[:space:]]*"[^"]*"' /data/options.json | cut -d '"' -f4)
 
-# hand off to original image startup
+PLEX_APP_ID=$(grep -o '"plex_app_id"[[:space:]]*:[[:space:]]*"[^"]*"' /data/options.json | cut -d '"' -f4)
+
+export SPOTIFY_API_CLIENT_ID
+export SPOTIFY_API_CLIENT_SECRET
+export SPOTIFY_API_REDIRECT_URI
+export ENCRYPTION_KEY
+export PLEX_APP_ID
+
+echo "ENV LOADED"
+echo "$SPOTIFY_API_CLIENT_ID"
+
 exec /docker-entrypoint.sh
