@@ -46,17 +46,17 @@ environment:
   STORAGE_DIR: /data
   PORT: "9030"
 
-  SPOTIFY_API_CLIENT_ID: "{{ spotify_client_id }}"
-  SPOTIFY_API_CLIENT_SECRET: "{{ spotify_client_secret }}"
+  SPOTIFY_API_CLIENT_ID: ${spotify_client_id}
+  SPOTIFY_API_CLIENT_SECRET: ${spotify_client_secret}
 
-  SPOTIFY_API_REDIRECT_URI: "{{ spotify_redirect_uri }}"
+  SPOTIFY_API_REDIRECT_URI: ${spotify_redirect_uri}
 
-  ENCRYPTION_KEY: "{{ encryption_key }}"
+  ENCRYPTION_KEY: ${encryption_key}
 
-  PLEX_APP_ID: "{{ plex_app_id }}"
-  TIDAL_API_CLIENT_ID: "{{ tidal_api_client_id }}"
-  TIDAL_API_CLIENT_SECRET: "{{ tidal_api_client_secret }}"
-  LIDARR_API_KEY: "{{ lidarr_api_key }}"
-  SLSKD_API_KEY: "{{ slskd_api_key }}"
+  PLEX_APP_ID: ${plex_app_id}
+  TIDAL_API_CLIENT_ID: ${tidal_api_client_id}
+  TIDAL_API_CLIENT_SECRET: ${tidal_api_client_secret}
+  LIDARR_API_KEY: ${lidarr_api_key}
+  SLSKD_API_KEY: ${slskd_api_key}
 
 image: jjdenhertog/spotify-to-plex
