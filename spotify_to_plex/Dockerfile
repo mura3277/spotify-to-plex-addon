@@ -1,9 +1,10 @@
 FROM jjdenhertog/spotify-to-plex
 
+ENV LANG C.UTF-8
+
 RUN apt-get update && apt-get install -y jq bash && rm -rf /var/lib/apt/lists/*
 
-COPY run.sh /run.sh
+COPY run.sh /
+RUN chmod a+x /run.sh
 
-RUN chmod +x /run.sh
-
-ENTRYPOINT ["/run.sh"]
+CMD [ "/run.sh" ]
