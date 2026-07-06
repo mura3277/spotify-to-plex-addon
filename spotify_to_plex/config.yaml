@@ -46,10 +46,10 @@ environment:
   STORAGE_DIR: /data
   PORT: "9030"
 
-  SPOTIFY_API_CLIENT_ID: spotify_client_id
-  SPOTIFY_API_CLIENT_SECRET: spotify_client_secret
+  SPOTIFY_API_CLIENT_ID: spotify_api_client_id
+  SPOTIFY_API_CLIENT_SECRET: spotify_api_client_secret
 
-  SPOTIFY_API_REDIRECT_URI: spotify_redirect_uri
+  SPOTIFY_API_REDIRECT_URI: spotify_api_redirect_uri
 
   ENCRYPTION_KEY: encryption_key
 
