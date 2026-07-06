@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 
-echo "RUN.SH STARTED"
+echo "Starting Spotify to Plex add-on..."
 
 export SPOTIFY_API_CLIENT_ID=$(bashio::config 'spotify_api_client_id')
 export SPOTIFY_API_CLIENT_SECRET=$(bashio::config 'spotify_api_client_secret')
@@ -14,4 +14,7 @@ export TIDAL_API_CLIENT_SECRET=$(bashio::config 'tidal_api_client_secret')
 export LIDARR_API_KEY=$(bashio::config 'lidarr_api_key')
 export SLSKD_API_KEY=$(bashio::config 'slskd_api_key')
 
+echo "Env loaded!"
+
+# hand off to original image startup
 exec /docker-entrypoint.sh

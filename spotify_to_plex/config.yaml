@@ -62,4 +62,4 @@ command: >
   exec /docker-entrypoint.sh
   "
 
-image: jjdenhertog/spotify-to-plex
+build: .
