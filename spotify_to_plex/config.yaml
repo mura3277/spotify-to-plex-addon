@@ -21,9 +21,9 @@ ports:
   9030/tcp: null
 
 options:
-  spotify_client_id: ""
-  spotify_client_secret: ""
-  spotify_redirect_uri: ""
+  spotify_api_client_id: ""
+  spotify_api_client_secret: ""
+  spotify_api_redirect_uri: ""
   encryption_key: ""
   plex_app_id: ""
   tidal_api_client_id: ""
@@ -32,9 +32,9 @@ options:
   slskd_api_key: ""
 
 schema:
-  spotify_client_id: str
-  spotify_client_secret: str
-  spotify_redirect_uri: str
+  spotify_api_client_id: str
+  spotify_api_client_secret: str
+  spotify_api_redirect_uri: str
   encryption_key: str
   plex_app_id: str
   tidal_api_client_id: str
@@ -46,8 +46,8 @@ environment:
   STORAGE_DIR: /data
   PORT: "9030"
 
-  SPOTIFY_CLIENT_ID: "{{ spotify_client_id }}"
-  SPOTIFY_CLIENT_SECRET: "{{ spotify_client_secret }}"
+  SPOTIFY_API_CLIENT_ID: "{{ spotify_client_id }}"
+  SPOTIFY_API_CLIENT_SECRET: "{{ spotify_client_secret }}"
 
   SPOTIFY_API_REDIRECT_URI: "{{ spotify_redirect_uri }}"
 
