@@ -12,8 +12,10 @@ startup: application
 boot: auto
 init: false
 
-ingress: true
+ingress: false
 ingress_port: 9030
+
+host_network: true
 
 ports:
   9030/tcp: null
