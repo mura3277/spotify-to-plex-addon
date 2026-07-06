@@ -21,4 +21,4 @@ export PLEX_APP_ID
 
 echo "ENV LOADED"
 
-exec /docker-entrypoint.sh "$@"
+exec /docker-entrypoint.sh
