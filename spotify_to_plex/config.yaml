@@ -49,6 +49,6 @@ environment:
   STORAGE_DIR: /data
   PORT: "9030"
 
-command: /run.sh
+entrypoint: /run.sh
 
 image: jjdenhertog/spotify-to-plex

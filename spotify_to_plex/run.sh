@@ -1,5 +1,7 @@
 #!/usr/bin/with-contenv bashio
 
+echo "RUN.SH STARTED"
+
 export SPOTIFY_API_CLIENT_ID=$(bashio::config 'spotify_api_client_id')
 export SPOTIFY_API_CLIENT_SECRET=$(bashio::config 'spotify_api_client_secret')
 export SPOTIFY_API_REDIRECT_URI=$(bashio::config 'spotify_api_redirect_uri')
