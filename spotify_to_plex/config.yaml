@@ -1,0 +1,47 @@
+name: Spotify to Plex
+slug: spotify_to_plex
+version: "1.0.0"
+description: Sync Spotify playlists with Plex using spotify-to-plex
+
+arch:
+  - amd64
+  - aarch64
+
+startup: application
+boot: auto
+init: false
+
+ingress: true
+ingress_port: 9030
+panel_icon: mdi:spotify
+
+ports:
+  9030/tcp: null
+
+ports_description:
+  9030/tcp: Web UI (Ingress managed)
+
+map:
+  - addon_config:rw
+
+options:
+  spotify_client_id: ""
+  spotify_client_secret: ""
+  spotify_redirect_uri: ""
+  encryption_key: ""
+  plex_app_id: "eXf+f9ktw3CZ8i45OY468WxriOCtoFxuNPzVeDcAwfw="
+
+schema:
+  spotify_client_id: str
+  spotify_client_secret: str
+  spotify_redirect_uri: str
+  encryption_key: str
+  plex_app_id: str
+
+environment:
+  STORAGE_DIR: /data
+  PORT: "9030"
+  HOSTNAME: "0.0.0.0"
+  SPOTIFY_SCRAPER_URL: "http://localhost:3020"
+
+watchdog: http://[HOST]:[PORT:9030]/
