@@ -6,7 +6,6 @@ description: Sync Spotify playlists with Plex
 
 arch:
   - amd64
-  - aarch64
 
 startup: application
 boot: auto
@@ -23,7 +22,7 @@ options:
   spotify_client_secret: ""
   spotify_redirect_uri: ""
   encryption_key: ""
-  plex_app_id: "eXf+f9ktw3CZ8i45OY468WxriOCtoFxuNPzVeDcAwfw="
+  plex_app_id: ""
 
 schema:
   spotify_client_id: str
