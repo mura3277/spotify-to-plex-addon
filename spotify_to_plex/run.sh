@@ -13,11 +13,23 @@ ENCRYPTION_KEY=$(grep -o '"encryption_key"[[:space:]]*:[[:space:]]*"[^"]*"' /dat
 
 PLEX_APP_ID=$(grep -o '"plex_app_id"[[:space:]]*:[[:space:]]*"[^"]*"' /data/options.json | cut -d '"' -f4)
 
+TIDAL_API_CLIENT_ID=$(grep -o '"tidal_api_client_id"[[:space:]]*:[[:space:]]*"[^"]*"' /data/options.json | cut -d '"' -f4)
+
+TIDAL_API_CLIENT_SECRET=$(grep -o '"tidal_api_client_secret"[[:space:]]*:[[:space:]]*"[^"]*"' /data/options.json | cut -d '"' -f4)
+
+LIDARR_API_KEY=$(grep -o '"lidarr_api_key"[[:space:]]*:[[:space:]]*"[^"]*"' /data/options.json | cut -d '"' -f4)
+
+SLSKD_API_KEY=$(grep -o '"slskd_api_key"[[:space:]]*:[[:space:]]*"[^"]*"' /data/options.json | cut -d '"' -f4)
+
 export SPOTIFY_API_CLIENT_ID
 export SPOTIFY_API_CLIENT_SECRET
 export SPOTIFY_API_REDIRECT_URI
 export ENCRYPTION_KEY
 export PLEX_APP_ID
+export TIDAL_API_CLIENT_ID
+export TIDAL_API_CLIENT_SECRET
+export LIDARR_API_KEY
+export SLSKD_API_KEY
 
 echo "ENV LOADED"
 
