@@ -1,4 +1,4 @@
-FROM jjdenhertog/spotify-to-plex
+FROM ghcr.io/mura3277/spotify-to-plex:latest
 
 ENV LANG C.UTF-8
 
