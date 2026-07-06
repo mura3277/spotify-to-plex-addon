@@ -1,6 +1,6 @@
 FROM jjdenhertog/spotify-to-plex
 
-RUN apk add --no-cache bash jq
+RUN apt-get update && apt-get install -y jq bash && rm -rf /var/lib/apt/lists/*
 
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
